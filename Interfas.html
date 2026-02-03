@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Trabajo</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="css/EstilosProyectoKika 2.css">
+</head>
+<body>
+
+<nav class="navbar-custom">
+    <a href="#" class="navbar-brand">KIKA</a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="navbar-toggler">
+        <i class="fas fa-bars"></i>
+    </label>
+
+    <div class="navbar-collapse">
+        <ul class="navbar-nav">
+
+            <!-- ADMINISTRADOR -->
+            <li class="nav-item role-admin">
+                <a class="nav-link" href="#">
+                    Administrador <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="sub-menu">
+                    <li><a href="Creacion Usuario.html">Crear Usuario</a></li>
+                    <li><a href="Modificar_Usuario.html">Modificar Usuario</a></li>
+                    <li><a href="Eliminar_Usuario.html">Eliminar Usuario</a></li>
+                    <li><a href="Bloquear_Usuario.html">Bloquear Usuario</a></li>
+                    <li><a href="Soporte.html">Soporte</a></li>
+                </ul>
+            </li>
+
+            <!-- JEFE DE PRODUCCIÓN -->
+            <li class="nav-item role-produccion">
+                <a class="nav-link" href="#">
+                    Jefe de Producción <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="sub-menu">
+                    <li><a href="crear_producto.html">Crear Producto</a></li>
+                    <li><a href="modificar_costo.html">Modificar Costo</a></li>
+                    <li><a href="historial_cambios.html">Historial de Cambios</a></li>
+                    <li><a href="anadir_costo.html">Añadir Costo</a></li>
+                    <li><a href="listado_productos.html">Listado Productos</a></li>
+                    <li><a href="materias_disponibles.html">Materiales disponibles</a></li>
+            </li>
+
+            <!-- JEFE DE MATERIA PRIMA -->
+            <li class="nav-item role-materia">
+                <a class="nav-link" href="#">
+                    Jefe de Materia Prima <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="sub-menu">
+                    <li><a href="modificar_costo.html">Modificar Costo</a></li>
+                    <li><a href="historial_cambios.html">Historial de Cambios</a></li>
+                    <li><a href="anadir_costo.html">Añadir Costo</a></li>
+                </ul>
+            </li>
+
+            <!-- COORDINADOR -->
+            <li class="nav-item role-coordinador">
+                <a class="nav-link" href="#">
+                    Coordinador <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="sub-menu">
+                    <li><a href="anadir_costo.html">Añadir Costos</a></li>
+                    <li><a href="#">Informe Final de Costos</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<!-- SCRIPT DE CONTROL POR ROL -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const cargo = localStorage.getItem("cargoUsuario");
+
+    // Ocultar todos los menús
+    document.querySelectorAll(".nav-item").forEach(item => {
+        item.style.display = "none";
+    });
+
+    // Mostrar solo el menú correspondiente
+    switch (cargo) {
+        case "admin":
+            document.querySelector(".role-admin").style.display = "block";
+            break;
+
+        case "empleado":
+            document.querySelector(".role-produccion").style.display = "block";
+            break;
+
+        case "gerente":
+            document.querySelector(".role-materia").style.display = "block";
+            break;
+
+        case "otro":
+            document.querySelector(".role-coordinador").style.display = "block";
+            break;
+
+        default:
+            alert("Acceso no autorizado");
+            window.location.href = "index.html";
+    }
+});
+</script>
+
+</body>
+</html>

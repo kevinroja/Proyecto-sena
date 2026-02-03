@@ -5,39 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern login Page | Kika.com</title>
+
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/Styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="design">
-            <img src="img/Logo-kika.png" alt="Logo Kika.com" class="logo-design">
-            <div class="pill-1 rotate-45"></div>
-            <div class="pill-2 rotate-45"></div>
-            <div class="pill-3 rotate-45"></div>
-            <div class="pill-4 rotate-45"></div>
-        </div>
-       <div class="login">
-    <h3 class="title">User login</h3>
-    <form action="INDEX.html" method="get">
-        <div class="text-input">
-            <i class="ri-user-fill"></i>
-            <input type="text" placeholder="Username" name="usuario" required>
-        </div>
-        <div class="text-input">
-            <i class="ri-lock-fill"></i>
-            <input type="password" placeholder="Password" name="password" required>
-        </div>
-        <div class="text-input">
-            <i class="ri-briefcase-fill"></i>
-            <select name="cargo" required>
-                <option value="" disabled selected>Seleccione su cargo</option>
-                <option value="admin">Administrador</option>
-                <option value="empleado">Jefe de Produccion</option>
-                <option value="gerente">Jefe de Materia Prima</option>
-                <option value="otro">Otro</option>
-            </select>
-        </div>
-        <button type="submit" class="login-btn">LOGIN</button>
-    </form>
+
+<div class="container">
+    <div class="design">
+        <img src="img/Logo-kika.png" alt="Logo Kika.com" class="logo-design">
+        <div class="pill-1 rotate-45"></div>
+        <div class="pill-2 rotate-45"></div>
+        <div class="pill-3 rotate-45"></div>
+        <div class="pill-4 rotate-45"></div>
+    </div>
+
+    <div class="login">
+        <h3 class="title">User login</h3>
+
+        <!-- FORMULARIO CORREGIDO -->
+        <form onsubmit="login(event)">
+            <div class="text-input">
+                <i class="ri-user-fill"></i>
+                <input type="text" placeholder="Username" name="usuario" required>
+            </div>
+
+            <div class="text-input">
+                <i class="ri-lock-fill"></i>
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+
+            <div class="text-input">
+                <i class="ri-briefcase-fill"></i>
+                <select name="cargo" required>
+                    <option value="" disabled selected>Seleccione su cargo</option>
+                    <option value="admin">Administrador</option>
+                    <option value="empleado">Jefe de Produccion</option>
+                    <option value="gerente">Jefe de Materia Prima</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <button type="submit" class="login-btn">LOGIN</button>
+        </form>
+    </div>
 </div>
+
+<!-- SCRIPT OBLIGATORIO -->
+<script>
+function login(event) {
+    event.preventDefault();
+
+    const cargo = document.querySelector('select[name="cargo"]').value;
+
+    // Guardar cargo
+    localStorage.setItem("cargoUsuario", cargo);
+
+    // Redirigir al menú
+    window.location.href = "Interfas.html";
+}
+</script>
+
+</body>
+</html>
+

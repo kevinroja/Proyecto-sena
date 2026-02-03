@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Producto</title>
+    <link rel="stylesheet" href="css/produccion.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Crear Producto</h2>
+
+    <form>
+
+        <input type="text" placeholder="Nombre del producto" required>
+
+        <input type="text" placeholder="Referencia" required>
+
+        <input type="text" placeholder="Talla (Ej: S, M, L, XL)" required>
+
+        <input type="text" placeholder="Color" required>
+
+        <!-- SECCIÓN DE MATERIALES -->
+        <fieldset class="materiales">
+            <legend>Materiales</legend>
+
+            <textarea placeholder="Materias primas (Ej: Algodón, Poliéster)" rows="3" required></textarea>
+
+            <textarea placeholder="Materias secundarias (Ej: Botones, Cremallera)" rows="3"></textarea>
+        </fieldset>
+
+        <input type="text" placeholder="Colección (Ej: Verano 2026)" required>
+
+        <select required>
+            <option value="" disabled selected>Tipo de prenda</option>
+            <option>Camisa</option>
+            <option>Pantalón</option>
+            <option>Vestido</option>
+            <option>Chaqueta</option>
+            <option>Otro</option>
+        </select>
+
+        <div class="button-group">
+            <button type="submit" class="btn primary">Guardar</button>
+            <button type="reset" class="btn secondary">Cancelar</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
