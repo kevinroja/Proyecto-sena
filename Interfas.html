@@ -50,6 +50,7 @@
                     <li><a href="anadir_costo.html">Añadir Costo</a></li>
                     <li><a href="listado_productos.html">Listado Productos</a></li>
                     <li><a href="materias_disponibles.html">Materiales disponibles</a></li>
+                </ul>
             </li>
 
             <!-- JEFE DE MATERIA PRIMA -->
@@ -79,10 +80,12 @@
     </div>
 </nav>
 
-<!-- SCRIPT DE CONTROL POR ROL -->
+<!-- CONTROL DE ACCESO POR ROL -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const cargo = localStorage.getItem("cargoUsuario");
+
+    console.log("Rol activo:", cargo);
 
     // Ocultar todos los menús
     document.querySelectorAll(".nav-item").forEach(item => {
@@ -103,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".role-materia").style.display = "block";
             break;
 
-        case "otro":
+        case "coordinador":
             document.querySelector(".role-coordinador").style.display = "block";
             break;
 
@@ -116,3 +119,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
