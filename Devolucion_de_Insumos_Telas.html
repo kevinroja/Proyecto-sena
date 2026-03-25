@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Devolución de Insumos</title>
+
+<link rel="stylesheet" href="css/produccion.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<table class="remision">
+
+
+<tr>
+<th colspan="9" class="titulo-produccion">
+    <div class="contenedor-titulo">
+        <span>DEVOLUCION DE INSUMOS</span>
+        <img src="img/LOGO BLANCO.png" class="logo-titulo">
+    </div>
+</th>
+</tr>
+
+<tr>
+
+<td class="label">TALLER:</td>
+
+<td colspan="4" contenteditable="true"></td>
+
+</tr>
+
+
+<tr>
+
+<td class="label"># ORDEN DE OP:</td>
+
+<td colspan="4" contenteditable="true"></td>
+
+</tr>
+
+<tr>
+<td class="label">FECHA DE ENTREGA:</td>
+<td colspan="8" contenteditable="true"></td>
+</tr>
+
+
+<tr>
+
+<td class="label">COLECCIÓN:</td>
+
+<td colspan="4" contenteditable="true"></td>
+
+</tr>
+
+
+<tr>
+
+<td class="label">REFERENCIA:</td>
+
+<td colspan="4" contenteditable="true"></td>
+
+</tr>
+
+<tr>
+
+<td class="label">ENVIADO POR:</td>
+
+<td colspan="4" contenteditable="true"></td>
+
+</tr>
+
+<tr>
+
+<td class="label">AUDITADO POR:</td>
+
+<td colspan="4" contenteditable="true"></td>
+
+</tr>
+
+
+<tr class="cabecera">
+
+<td>Variante / Color</td>
+
+<td>INSUMO</td>
+
+<td>CANTIDAD</td>
+
+<td>OBSERVACIONES</td>
+
+</tr>
+
+
+<tbody id="tablaInsumos">
+
+<tr>
+
+<td contenteditable="true"></td>
+<td contenteditable="true" class="cantidad"></td>
+<td contenteditable="true"></td>
+<td contenteditable="true"></td>
+
+</tr>
+
+<tr>
+
+<td contenteditable="true"></td>
+<td contenteditable="true" class="cantidad"></td>
+<td contenteditable="true"></td>
+<td contenteditable="true"></td>
+</tr>
+
+<tr>
+
+<td contenteditable="true"></td>
+<td contenteditable="true" class="cantidad"></td>
+<td contenteditable="true"></td>
+<td contenteditable="true"></td>
+
+</tr>
+
+<tr>
+
+<td contenteditable="true"></td>
+<td contenteditable="true" class="cantidad"></td>
+<td contenteditable="true"></td>
+<td contenteditable="true"></td>
+
+</tr>
+<tr>
+
+<td contenteditable="true"></td>
+<td contenteditable="true" class="cantidad"></td>
+<td contenteditable="true"></td>
+<td contenteditable="true"></td>
+
+</tr>
+<tr>
+
+<td contenteditable="true"></td>
+<td contenteditable="true" class="cantidad"></td>
+<td contenteditable="true"></td>
+<td contenteditable="true"></td>
+
+</tr>
+<tr>
+
+<td contenteditable="true"></td>
+<td contenteditable="true" class="cantidad"></td>
+<td contenteditable="true"></td>
+<td contenteditable="true"></td>
+
+</tr>
+<tr>
+
+<td contenteditable="true"></td>
+<td contenteditable="true" class="cantidad"></td>
+<td contenteditable="true"></td>
+<td contenteditable="true"></td>
+
+</tr>
+<tr>
+
+<td contenteditable="true"></td>
+<td contenteditable="true" class="cantidad"></td>
+<td contenteditable="true"></td>
+<td contenteditable="true"></td>
+
+</tr>
+<tr>
+
+<td contenteditable="true"></td>
+<td contenteditable="true" class="cantidad"></td>
+<td contenteditable="true"></td>
+<td contenteditable="true"></td>
+
+</tr>
+
+</tbody>
+
+
+</table>
+
+
+<div class="botones">
+
+<button id="guardar" class="btn guardar">
+
+Guardar
+
+</button>
+
+<button id="cancelar" class="btn cancelar">
+
+Cancelar
+
+</button>
+
+</div>
+
+
+</div>
+
+<script src="js/devolucion.js"></script>
+
+<script>
+
+const cargo = localStorage.getItem("cargoUsuario");
+
+if(!cargo){
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+</html>

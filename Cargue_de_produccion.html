@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
-<title>Entrega Producción</title>
+
+<title>Cargue Producción</title>
 
 <link rel="stylesheet" href="css/produccion.css">
 
@@ -14,50 +16,80 @@
 
 <table class="remision">
 
+
 <tr>
-<th colspan="9" class="titulo">
-
-ENTREGA DE PRODUCCION
-
+<th colspan="9" class="titulo-produccion">
+    <div class="contenedor-titulo">
+        <span>CARGUE DE PRODUCCION</span>
+        <img src="img/LOGO BLANCO.png" class="logo-titulo">
+    </div>
 </th>
 </tr>
 
 
-<!-- DATOS GENERALES -->
-
 <tr>
+
 <td class="label">TALLER:</td>
+
 <td colspan="8" contenteditable="true"></td>
+
 </tr>
 
 <tr>
-<td class="label"># DE REMISION:</td>
+
+<td class="label"># ORDEN DE OP:</td>
+
 <td colspan="8" contenteditable="true"></td>
+
 </tr>
 
 <tr>
+
+<td class="label">FICHA TECNICA:</td>
+
+<td colspan="8" contenteditable="true"></td>
+
+</tr>
+
+<tr>
+
+<td class="label">FECHA DE ENTREGA:</td>
+
+<td colspan="8" contenteditable="true"></td>
+
+</tr>
+
+
+<tr>
+
 <td class="label">COLECCIÓN:</td>
+
 <td colspan="8" contenteditable="true"></td>
+
 </tr>
 
 <tr>
+
 <td class="label">REFERENCIA:</td>
+
 <td colspan="8" contenteditable="true"></td>
+
 </tr>
 
 <tr>
-<td class="label">COLOR:</td>
-<td colspan="8" contenteditable="true"></td>
-</tr>
 
-<tr>
 <td class="label">COSTO:</td>
+
 <td colspan="8" contenteditable="true"></td>
+
 </tr>
 
 <tr>
-<td class="label">AUDITADO POR:</td>
+
+<td class="label">DESCRIPCION:</td>
+
 <td colspan="8" contenteditable="true"></td>
+
 </tr>
 
 
@@ -74,12 +106,20 @@ TALLAS
 
 <tr class="cabecera">
 
+<td>Variante / Color</td>
+
 <td>0</td>
+
 <td>2</td>
+
 <td>4</td>
+
 <td>6</td>
+
 <td>8</td>
+
 <td>10</td>
+
 <td>12</td>
 
 <td colspan="2">
@@ -92,31 +132,12 @@ TOTAL CANT
 
 
 
-<!-- FILAS EDITABLES -->
-
 <tbody id="tablaProduccion">
 
-<tr>
-
-<td contenteditable="true" class="numero"></td>
-<td contenteditable="true" class="numero"></td>
-<td contenteditable="true" class="numero"></td>
-<td contenteditable="true" class="numero"></td>
-<td contenteditable="true" class="numero"></td>
-<td contenteditable="true" class="numero"></td>
-<td contenteditable="true" class="numero"></td>
-
-<td colspan="2" class="totalFila">
-
-0
-
-</td>
-
-</tr>
-
 
 <tr>
 
+<td contenteditable="true" class="numero"></td>
 <td contenteditable="true" class="numero"></td>
 <td contenteditable="true" class="numero"></td>
 <td contenteditable="true" class="numero"></td>
@@ -142,6 +163,7 @@ TOTAL CANT
 <td contenteditable="true" class="numero"></td>
 <td contenteditable="true" class="numero"></td>
 <td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
 
 <td colspan="2" class="totalFila">
 
@@ -150,6 +172,59 @@ TOTAL CANT
 </td>
 
 </tr>
+
+<tr>
+
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+
+<td colspan="2" class="totalFila">
+
+0
+
+</td>
+
+</tr>
+
+<tr>
+
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+
+<td colspan="2" class="totalFila">0
+
+</td>
+
+</tr>
+
+<tr>
+
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+
+<td colspan="2" class="totalFila">
+
+0
+
+</td>
 
 </tbody>
 
@@ -157,15 +232,13 @@ TOTAL CANT
 
 <tr>
 
-<td colspan="7" class="totalTexto">
+<td colspan="8" class="totalTexto">
 
-TOTAL GENERAL
+TOTAL
 
 </td>
 
-<td colspan="2" id="totalGeneral">
-
-0
+<td colspan="2" id="totalGeneral" class="numero"> 0
 
 </td>
 
@@ -174,23 +247,28 @@ TOTAL GENERAL
 
 </table>
 
+
+
 <div class="botones">
 
 <button id="guardar" class="btn guardar">
+
 Guardar
+
 </button>
 
 <button id="cancelar" class="btn cancelar">
+
 Cancelar
+
 </button>
 
 </div>
 
-
 </div>
 
 
-<script src="js/produccion.js"></script>
+<script src="js/cargue.js"></script>
 
 <script>
 

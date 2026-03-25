@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Consulta Entrega Producción</title>
+
+<link rel="stylesheet" href="css/consulta.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<table class="remision">
+
+<tr>
+<th colspan="9" class="titulo-produccion">
+    <div class="contenedor-titulo">
+        <span>CONSULTA ENTREGA DE PRODUCCIÓN</span>
+        <img src="img/LOGO BLANCO.png" class="logo-titulo">
+    </div>
+</th>
+</tr>
+
+
+<!-- DATOS GENERALES -->
+
+<tr>
+<td class="label">TALLER:</td>
+<td colspan="8" contenteditable="true"></td>
+</tr>
+
+<tr>
+<td class="label"># ORDEN DE OP:</td>
+<td colspan="8" contenteditable="true"></td>
+</tr>
+
+<tr>
+<td class="label">FECHA DE ENTREGA:</td>
+<td colspan="8" contenteditable="true"></td>
+</tr>
+
+<tr>
+<td class="label">COLECCIÓN:</td>
+<td colspan="8" contenteditable="true"></td>
+</tr>
+
+<tr>
+<td class="label">REFERENCIA:</td>
+<td colspan="8" contenteditable="true"></td>
+</tr>
+
+<tr>
+<td class="label">AUDITADO POR:</td>
+<td colspan="8" contenteditable="true"></td>
+</tr>
+
+<tr>
+<td class="label">OBSERVACIONES:</td>
+<td colspan="8" contenteditable="true"></td>
+</tr>
+
+
+<tr>
+
+<th colspan="9" class="subtitulo">TALLAS
+
+</th>
+
+</tr>
+
+
+<tr class="cabecera">
+
+<td>Variante / Color</td>
+<td>0</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>10</td>
+<td>12</td>
+
+<td colspan="1">TOTAL CANT
+
+</td>
+
+</tr>
+
+
+
+<!-- FILAS EDITABLES -->
+
+<tbody id="tablaProduccion">
+
+<tr>
+
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+
+<td colspan="2" class="totalFila">
+
+0
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+
+<td colspan="2" class="totalFila">
+
+0
+
+</td>
+
+</tr>
+
+<tr>
+
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+
+<td colspan="2" class="totalFila">
+
+0
+
+</td>
+
+<tr>
+
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+
+<td colspan="2" class="totalFila">0
+
+</td>
+
+
+</tr>
+
+<tr>
+
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+
+<td colspan="2" class="totalFila">0
+
+</td>
+
+
+</tr>
+
+<tr>
+
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+<td contenteditable="true" class="numero"></td>
+
+<td colspan="2" class="totalFila">0
+
+</td>
+
+
+</tr>
+
+</tbody>
+
+
+
+<tr>
+
+<td colspan="8" class="totalTexto">TOTAL GENERAL
+
+</td>
+
+<td colspan="2" id="totalGeneral" class="numero">  0
+
+</td>
+
+</tr>
+
+
+</table>
+
+<div class="botones">
+
+<button id="Consultar" class="btn Consultar">
+Consultar
+</button>
+
+</div>
+
+
+</div>
+
+
+<script src="js/consulta.js"></script>
+
+<script>
+
+const cargo = localStorage.getItem("cargoUsuario");
+
+if(!cargo){
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,122 +1,266 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú de Trabajo</title>
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-          crossorigin="anonymous" referrerpolicy="no-referrer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/EstilosProyectoKika 2.css">
+<title>Menú de Trabajo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/EstilosProyectoKika 2.css">
+
 </head>
+
 <body>
 
-<nav class="navbar-custom">
-    <a href="#" class="navbar-brand">KIKA</a>
+<!-- NAV SUPERIOR -->
 
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="navbar-toggler">
-        <i class="fas fa-bars"></i>
-    </label>
 
-    <div class="navbar-collapse">
-        <ul class="navbar-nav">
+<div class="navbar-custom">
+    
+    <a class="navbar-brand" href="#">
+        <img src="img/LOGO BLANCO.png" class="logo-navbar">
+    </a>
 
-            <!-- ADMINISTRADOR -->
-            <li class="nav-item role-admin">
-                <a class="nav-link" href="#">
-                    Administrador <i class="fas fa-chevron-down"></i>
-                </a>
-                <ul class="sub-menu">
-                    <li><a href="Creacion Usuario.html">Crear Usuario</a></li>
-                    <li><a href="Modificar_Usuario.html">Modificar Usuario</a></li>
-                    <li><a href="Eliminar_Usuario.html">Eliminar Usuario</a></li>
-                    <li><a href="Bloquear_Usuario.html">Bloquear Usuario</a></li>
-                    <li><a href="Soporte.html">Soporte</a></li>
-                </ul>
-            </li>
+    <button class="btn-logout" onclick="cerrarSesion()">Cerrar Sesión</button>
+    
+</div>
 
-            <!-- JEFE DE PRODUCCIÓN -->
-            <li class="nav-item role-produccion">
-                <a class="nav-link" href="#">
-                    Jefe de Producción <i class="fas fa-chevron-down"></i>
-                </a>
-                <ul class="sub-menu">
-                    <li><a href="crear_producto.html">Crear Producto</a></li>
-                    <li><a href="modificar_costo.html">Modificar Costo</a></li>
-                    <li><a href="historial_cambios.html">Historial de Cambios</a></li>
-                    <li><a href="anadir_costo.html">Añadir Costo</a></li>
-                    <li><a href="listado_productos.html">Listado Productos</a></li>
-                    <li><a href="materias_disponibles.html">Materiales disponibles</a></li>
-                </ul>
-            </li>
+<!-- CONTENEDOR PRINCIPAL -->
 
-            <!-- JEFE DE MATERIA PRIMA -->
-            <li class="nav-item role-materia">
-                <a class="nav-link" href="#">
-                    Jefe de Materia Prima <i class="fas fa-chevron-down"></i>
-                </a>
-                <ul class="sub-menu">
-                    <li><a href="modificar_costo.html">Modificar Costo</a></li>
-                    <li><a href="historial_cambios.html">Historial de Cambios</a></li>
-                    <li><a href="anadir_costo.html">Añadir Costo</a></li>
-                </ul>
-            </li>
+<div class="contenedor-principal">
 
-            <!-- COORDINADOR -->
-            <li class="nav-item role-coordinador">
-                <a class="nav-link" href="#">
-                    Coordinador <i class="fas fa-chevron-down"></i>
-                </a>
-                <ul class="sub-menu">
-                    <li><a href="anadir_costo.html">Añadir Costos</a></li>
-                    <li><a href="#">Informe Final de Costos</a></li>
-                </ul>
-            </li>
+<!-- MENU LATERAL -->
 
-        </ul>
-    </div>
-</nav>
+<div class="menu-lateral">
 
-<!-- CONTROL DE ACCESO POR ROL -->
+<ul>
+
+<!-- ADMIN -->
+
+<li class="nav-item role-admin">
+
+<p class="titulo-menu">
+
+<i class="fa-solid fa-user-shield"></i>
+
+Administrador
+
+</p>
+
+<ul class="sub-menu">
+
+<li><a href="#" onclick="cargarPagina('Creacion Usuario.html')">Crear Usuario</a></li>
+
+<li><a href="#" onclick="cargarPagina('Modificar_Usuario.html')">Modificar Usuario</a></li>
+
+<li><a href="#" onclick="cargarPagina('Eliminar_Usuario.html')">Eliminar Usuario</a></li>
+
+<li><a href="#" onclick="cargarPagina('Bloquear_Usuario.html')">Bloquear Usuario</a></li>
+
+<li><a href="#" onclick="cargarPagina('Soporte.html')">Soporte</a></li>
+
+</ul>
+
+</li>
+
+
+
+<!-- TALLER -->
+
+<li class="nav-item role-taller">
+
+<p class="titulo-menu">
+
+<i class="fa-solid fa-shirt"></i>
+
+Taller
+
+</p>
+
+<ul class="sub-menu">
+
+<li><a href="#" onclick="cargarPagina('Entrega_de_produccion.html')">Entrega Producción</a></li>
+
+<li><a href="#" onclick="cargarPagina('Devolucion_de_Insumos_Telas.html')">Devolución Insumos</a></li>
+
+<li><a href="#" onclick="cargarPagina('Consulta_de_informacion.html')">Consulta de Produccion</a></li>
+
+</ul>
+
+</li>
+
+
+
+<!-- PRODUCCION -->
+
+<li class="nav-item role-produccion">
+
+<p class="titulo-menu">
+
+<i class="fa-solid fa-industry"></i>
+
+Jefe Producción
+
+</p>
+
+<ul class="sub-menu">
+
+<li><a href="#" onclick="cargarPagina('Cargue_de_produccion.html')">Cargue Producción</a></li>
+
+<li><a href="#" onclick="cargarPagina('listado_productos.html')">Listado Productos</a></li>
+
+</ul>
+
+</li>
+
+
+
+<!-- MATERIA PRIMA -->
+
+<li class="nav-item role-materia">
+
+<p class="titulo-menu">
+
+<i class="fa-solid fa-box"></i>
+
+Jefe Materia Prima
+
+</p>
+
+<ul class="sub-menu">
+
+<li><a href="#" onclick="cargarPagina('Consulta_Devolución_de_Insumos.html')">Consulta devolución Insumos</a></li>
+
+</ul>
+
+</li>
+
+
+
+<!-- Jefe de almacen -->
+
+<li class="nav-item role-coordinador">
+
+<p class="titulo-menu">
+
+<i class="fa-solid fa-people-group"></i>
+
+Jefe de almacen
+
+</p>
+
+<ul class="sub-menu">
+
+<li><a href="#" onclick="cargarPagina('Consulta_Entrega_Producción.html')">Consulta Entrega Producción</a></li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- CONTENIDO DERECHO -->
+
+<div class="contenido">
+
+<iframe id="visorContenido"></iframe>
+
+</div>
+
+</div>
+
+
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const cargo = localStorage.getItem("cargoUsuario");
 
-    console.log("Rol activo:", cargo);
+document.addEventListener("DOMContentLoaded",()=>{
 
-    // Ocultar todos los menús
-    document.querySelectorAll(".nav-item").forEach(item => {
-        item.style.display = "none";
-    });
+const cargo=localStorage.getItem("cargoUsuario");
 
-    // Mostrar solo el menú correspondiente
-    switch (cargo) {
-        case "admin":
-            document.querySelector(".role-admin").style.display = "block";
-            break;
+if(!cargo){
 
-        case "empleado":
-            document.querySelector(".role-produccion").style.display = "block";
-            break;
+window.location.href="index.html";
 
-        case "gerente":
-            document.querySelector(".role-materia").style.display = "block";
-            break;
+}
 
-        case "coordinador":
-            document.querySelector(".role-coordinador").style.display = "block";
-            break;
 
-        default:
-            alert("Acceso no autorizado");
-            window.location.href = "index.html";
-    }
+
+// ocultar todos SOLO lateral
+
+document.querySelectorAll(".menu-lateral .nav-item")
+
+.forEach(menu=>{
+
+menu.style.display="none";
+
 });
+
+
+
+// mostrar según rol
+
+if(cargo==="admin"){
+
+document.querySelector(".role-admin").style.display="block";
+
+}
+
+else if(cargo==="empleado"){
+
+document.querySelector(".role-taller").style.display="block";
+
+}
+
+else if(cargo==="produccion"){
+
+document.querySelector(".role-produccion").style.display="block";
+
+}
+
+else if(cargo==="gerente"){
+
+document.querySelector(".role-materia").style.display="block";
+
+}
+
+else if(cargo==="coordinador"){
+
+document.querySelector(".role-coordinador").style.display="block";
+
+}
+
+else{
+
+alert("Acceso no autorizado");
+
+window.location.href="index.html";
+
+}
+
+});
+
+
+
+function cargarPagina(pagina){
+
+document.getElementById("visorContenido").src=pagina;
+
+}
+
+function cerrarSesion(){
+    localStorage.removeItem("cargoUsuario");
+    window.location.href = "index.html";
+}
+
 </script>
 
 </body>
-</html>
 
+</html>
